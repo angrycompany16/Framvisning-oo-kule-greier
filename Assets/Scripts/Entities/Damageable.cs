@@ -46,7 +46,7 @@ public class Damageable : MonoBehaviour
         } 
         
         if (iFrames > 0) {
-
+            StartCoroutine(InvincibilityFrames(iFrames));
         }
 
         if (currentHealth <= 0) {
@@ -65,15 +65,19 @@ public class Damageable : MonoBehaviour
     }
 
     IEnumerator InvincibilityFrames (float duration) {
+        Physics2D.IgnoreLayerCollision(6, 9);
+        Physics2D.IgnoreLayerCollision(6, 8);
+
+        yield return new WaitForSeconds(duration);
+
+        Physics2D.IgnoreLayerCollision(6, 9, false);
+        Physics2D.IgnoreLayerCollision(6, 8, false);
+    }
+
+    IEnumerator Blink(float duration, float interval) {
         float t = 0;
-        while (t < duration) {
-            t += Time.deltaTime;
+        while (t < interval) {
             
-            Physics.IgnoreLayerCollision(6, 9);
-
-            yield return null;
         }
-
-        Physics.IgnoreLayerCollision(6, 9, false);
     }
 }

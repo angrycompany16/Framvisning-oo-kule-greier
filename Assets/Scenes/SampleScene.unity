@@ -898,9 +898,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectList:
-  - {fileID: 9190828590795083349, guid: d7224137121397f4086613d001aaa2c6, type: 3}
   - {fileID: 4854559499268641300, guid: 64297444ac61e0877a250ce521450cb9, type: 3}
-  - {fileID: 7821473630499714503, guid: 108c99de3076b86cfa6e35c315b9db32, type: 3}
   spawnDelay: 2
   radius: 10
   difficultyWaitTime: 10
@@ -1431,6 +1429,7 @@ MonoBehaviour:
   playerHpBar: {fileID: 756997937}
   gameManager: {fileID: 515242944}
   spawner: {fileID: 126861416}
+  iFrames: 1
 --- !u!114 &756997937
 MonoBehaviour:
   m_ObjectHideFlags: 0
